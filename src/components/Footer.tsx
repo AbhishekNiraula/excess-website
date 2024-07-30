@@ -55,8 +55,8 @@ const Footer = () => {
             <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
                 {
                     footerNavs.map((item, idx) => (
-                        <li className=" hover:text-primaryBlue transition duration-500 text-[14px]">
-                            <a key={idx} href={item.href}>
+                        <li key={idx} className=" hover:text-primaryBlue transition duration-500 text-[14px]">
+                            <a href={item.href}>
                                 { item.name }
                             </a>
                         </li>

@@ -79,7 +79,7 @@ const Member = () => {
         <div className="w-[75%]  m-auto text-center">
         <div className="text-center">
                     <h2 className="text-2xl font-bold text-offWhite sm:text-4xl xl:text-3xl">Our Members</h2>
-                    <h2 className='text-offWhite text-sm mt-2'>EXCESS 11'th Executive Committee</h2>
+                    <h2 className='text-offWhite text-sm mt-2'>EXCESS 11&apos;th Executive Committee</h2>
         </div>
         <div className="">
         <Swiper
