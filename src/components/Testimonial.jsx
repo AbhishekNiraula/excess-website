@@ -17,7 +17,7 @@ import "@/src/app/testimonial.css";
 
 
 
-export default async function Testimonial() {
+export default function Testimonial() {
 
     const testimonials = [
         {
