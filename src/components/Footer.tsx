@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SocialIcon } from 'react-social-icons'
 
@@ -41,7 +42,7 @@ const Footer = () => {
     return (
         <footer className="text-gray-400 bg-white px-4 py-5 mx-auto md:px-8">
             <div className="max-w-lg   sm:mx-auto sm:text-center">
-                <img src="./icon.png" alt='Excess Icon' className="w-12 sm:mx-auto" />
+                <Image width={12} height={12} src="./icon.png" alt='Excess Icon' className="w-12 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-[13px]">
                     EXCESS commits to remain at the forefront of growth, excellancy and innovation preparing students to shape a meaningful future.
                     <br />
