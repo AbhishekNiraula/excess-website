@@ -24,71 +24,50 @@ export default async function Testimonial() {
             "user_id": 1,
             "name": "Mahesh Chaudhary",
             "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
-            "profile": "./images/testimonial/Mahesh.jpg",
+            "profile": "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC/blob/main/Committee/Mahesh%20Chaudhary.jpg?raw=true",
             "post": "EXCESS President 11'th Committee"
         },
         {
             "user_id": 2,
-            "name": "Ujwal Neupane",
-            "body": "As a founding member of EXCESS, I'm incredibly proud of how the society has flourished over the past decade. Watching it grow and inspire students fills me with immense joy.",
-            "profile": "./images/testimonial/UjwalNeupane.jpg",
-            "post": "EXCESS President 1'st Committee"
-        },
-        {
-            "user_id": 3,
-            "name": "Bharat Bhatta",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way",
-            "profile": "./images/testimonial/BharatBhatta.jpg",
-            "post": "EXCESS President 2'nd and 3'rd Committee"
-        },
-        {
-            "user_id": 4,
-            "name": "Suresh Bhandari",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way",
-            "profile": "./images/testimonial/SureshBhandari.jpg",
-            "post": "EXCESS President 4'th Committee"
-        },
-        {
-            "user_id": 5,
             "is_campus": true,
             "name": "Baikuntha Acharya",
             "body": "EXCESS provided a supportive community and valuable learning opportunities. We focused on growth and innovation in electronics engineering, preparing students for real-world challenges.",
-            "profile": "./images/testimonial/BaikunthaAcharya.jpg",
+            "profile": "/images/testimonial/BaikunthaAcharya.jpg",
             "post": "EXCESS Secretary 5'th Committee"
         },
         {
-            "user_id": 6,
+            "user_id": 3,
             "name": "Ram Binay Sharma",
             "body": "Working with EXCESS has shown me the power of collaboration and the impact we can make through teamwork and shared goals.",
-            "profile": "./images/testimonial/RamBinaySharma.jpg",
+            "profile": "/images/testimonial/BharatBhatta.jpg",
             "post": "EXCESS Secretary 6'th Committee"
         },
         {
-            "user_id": 7,
+            "user_id": 4,
             "name": "Sunil Pokharel",
             "body": "As president of EXCESS, I've seen firsthand the transformative impact of our society on our members' skills and confidence. We strive to foster an environment where everyone can excel.",
-            "profile": "./images/testimonial/SunilPokharel.jpg",
+            "profile": "/images/testimonial/SunilPokharel.jpg",
             "post": "EXCESS Secretary 7'th Committee"
         },
         {
-            "user_id": 8,
+            "user_id": 5,
             "name": "Sushan Kattel",
             "body": "EXCESS stands at the forefront of innovation in electronics engineering. It's a privilege to steer this society toward new achievements that define the future of technology.",
-            "profile": "./images/testimonial/SushanKattel.jpg",
+            "profile": "/images/testimonial/SushanKattel.jpg",
             "post": "EXCESS Secretary 8'th Committee"
         },
         {
-            "user_id": 9,
+            "user_id": 6,
             "name": "Gokarna Baskota",
             "body": "EXCESS was a cornerstone of my university experience. We fostered innovation and community, developing skills that extended beyond the classroom. The opportunities to lead and innovate shaped my career trajectory.",
-            "profile": "./images/testimonial/Gokarna.jpg",
+            "profile": "/images/testimonial/Gokarna.jpg",
             "post": "EXCESS Secretary 9'th Committee"
         },
         {
-            "user_id": 10,
+            "user_id": 7,
             "name": "Suraj Bhattarai",
             "body": "Leading EXCESS was an honor. We introduced groundbreaking initiatives like CS50x, shaping our students' technical expertise. The spirit of collaboration and commitment to excellence defined our achievements.",
-            "profile": "./images/testimonial/SurajBhattarai.png",
+            "profile": "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC/blob/main/assets/Committee/Suraj%20Bhattarai.png?raw=true",
             "post": "EXCESS Secretary 10'th Committee"
         }
     ]
@@ -98,7 +77,7 @@ export default async function Testimonial() {
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
-                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos;s Reflections</h2>
+                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos; Reflections</h2>
                 </div>
                 <FaQuoteLeft className="w-24 h-24 absolute top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
 
