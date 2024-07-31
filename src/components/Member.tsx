@@ -95,7 +95,7 @@ const data =[
   {
     id:8,
     name:"Yogendra Kumar Karn",
-    img:"./images/member/.jpg",
+    img:"./images/member/Yogendra.jpeg",
     review:"Project Manager",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
