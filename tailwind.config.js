@@ -1,5 +1,3 @@
-const { url } = require('inspector');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -19,10 +17,10 @@ module.exports = {
         offBlueTrans: 'rgb(187 232 250 / 1)',
       },
       backgroundImage: {
-        'background': "url('/images/background-main.png')",
-        'erc-scaled': "url('/images/erc-scaled.jpg')",
-        'wave': "url('/images/wave.svg')",
-        'line': "url('/images/line.svg')",
+        'background': "url('./images/background-main.png')",
+        'erc-scaled': "url('./images/erc-scaled.jpg')",
+        'wave': "url('./images/wave.svg')",
+        'line': "url('./images/line.svg')",
       }
     },
   },
