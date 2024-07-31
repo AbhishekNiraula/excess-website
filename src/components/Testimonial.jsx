@@ -20,7 +20,7 @@ export default function Testimonial() {
             "user_id": 1,
             "name": "Mahesh Chaudhary",
             "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
-            "profile": "./images/testimonial/Mahesh.jpg",
+            "profile": "./images/member/Mahesh.jpg",
             "post": "EXCESS President 11'th Committee"
         },
         {
