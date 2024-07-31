@@ -93,7 +93,7 @@ export default async function Testimonial() {
     ]
 
     return (
-        <section className="py-14  sm:py-10 bg-white lg:py-12">
+        <section className="bg-white">
         <div className="mx-auto sm:px-6 lg:px-8">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
