@@ -77,7 +77,7 @@ export default async function Testimonial() {
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
-                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President's Reflections</h2>
+                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos;s Reflections</h2>
                 </div>
                 <FaQuoteLeft className="w-24 h-24 absolute top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
 
