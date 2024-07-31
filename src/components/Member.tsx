@@ -213,7 +213,7 @@ const Member = () => {
                             width={32}
                             height={32}
                             alt={d.name}
-                            className="flex-shrink-0 object-cover rounded-full mt-10 mb-2 w-28 h-28 sm:w-32 sm:h-32 border-4 border-offW"
+                            className="flex-shrink-0 object-cover rounded-full mt-10 mb-2 w-28 h-28 sm:w-32 sm:h-32 border-4 border-offWhite"
                             />
                     </div>
 
