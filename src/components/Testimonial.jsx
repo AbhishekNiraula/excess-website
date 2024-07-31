@@ -31,7 +31,7 @@ export default async function Testimonial() {
             "user_id": 2,
             "name": "Ujwal Neupane",
             "body": "As a founding member of EXCESS, I'm incredibly proud of how the society has flourished over the past decade. Watching it grow and inspire students fills me with immense joy.",
-            "profile": "UjwalNeupane.jpg",
+            "profile": "./images/testimonial/UjwalNeupane.jpg",
             "post": "EXCESS President 1'st Committee"
         },
         {
