@@ -27,7 +27,7 @@ export default function Testimonial() {
             "user_id": 2,
             "name": "Ujwal Neupane",
             "body": "As a founding member of EXCESS, I'm incredibly proud of how the society has flourished over the past decade. Watching it grow and inspire students fills me with immense joy.",
-            "profile": "UjwalNeupane.jpg",
+            "profile": "./images/testimonial/UjwalNeupane.jpg",
             "post": "EXCESS President 1'st Committee"
         },
         {
@@ -90,7 +90,7 @@ export default function Testimonial() {
     ]
 
     return (
-        <section className="py-14  overflow-x-hidden sm:py-10 bg-offWhite lg:py-12">
+        <section className="py-14  sm:py-10 bg-offWhite lg:py-12">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
@@ -98,9 +98,9 @@ export default function Testimonial() {
                 </div>
                 <FaQuoteLeft className="w-24 h-24 absolute top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
 
-                <div className="relative md:mt-12  bg-offWhite shadow-xl rounded-3xl">
+                <div className="relative md:mt-12 w-full  bg-offWhite shadow-xl rounded-3xl">
                     
-                    <div className="relative max-w-lg max-[550px]:max-w-md max-[470px]:max-w-sm max-[410px]:max-w-xs  bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none">
+                    <div className="relative  max-w-lg max-[550px]:max-w-md max-[470px]:max-w-sm max-[410px]:max-w-xs  bg-wave bg-no-repeat bg-cover shadow-xl rounded-3xl text-offBlack mx-auto md:max-w-none">
                         <div className="flex flex-col overflow-hidden">
                             
                             <div className="previous w-12 h-12 ml-4 md:ml-14">
