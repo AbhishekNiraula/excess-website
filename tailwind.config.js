@@ -17,10 +17,10 @@ module.exports = {
         offBlueTrans: 'rgb(187 232 250 / 1)',
       },
       backgroundImage: {
-        'background': "url('../public/images/background-main.png')",
-        'erc-scaled': "url('../public/images/erc-scaled.jpg')",
-        'wave': "url('../public/images/wave.svg')",
-        'line': "url('../public/images/line.svg')",
+        'background': "url('../../public/images/background-main.png')",
+        'erc-scaled': "url('../../public/images/erc-scaled.jpg')",
+        'wave': "url('../../public/images/wave.svg')",
+        'line': "url('../../public/images/line.svg')",
       }
     },
   },
