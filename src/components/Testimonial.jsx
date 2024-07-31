@@ -90,8 +90,8 @@ export default function Testimonial() {
     ]
 
     return (
-        <section className="py-14  overflow-x-hidden sm:py-10 bg-offWhite lg:py-12">
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <section className="py-14  sm:py-10 bg-offWhite lg:py-12">
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-10">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
                     <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos;s Reflections</h2>
