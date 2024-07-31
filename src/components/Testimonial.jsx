@@ -115,7 +115,8 @@ export default async function Testimonial() {
                                 parallax={true}
                                 autoplay={{
                                     delay: 2500,
-                                    disableOnInteraction: false,
+                                    disableOnInteraction: false,                              
+                                    pauseOnMouseEnter: true,
                                 }}
                                 pagination={{ el: ".swiper-pagination",type: "bullets", clickable: true, dynamicBullets: true,}}         
                                 mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
@@ -138,13 +139,13 @@ export default async function Testimonial() {
 
                                                     <Image
                                                         loader={({ src }) => src}
-                                                        src={testimonial.profile ? testimonial.profile : "/images/groot.jpg"}
+                                                        src={testimonial.profile ? testimonial.profile : "./images/groot.jpg"}
                                                         width={32}
                                                         height={32}
                                                         alt={testimonial.name} 
                                                         onError={(event) => {
-                                                            event.target.id = "/images/groot.jpg";
-                                                            event.target.srcset = "/images/groot.jpg";
+                                                            event.target.id = "./images/groot.jpg";
+                                                            event.target.srcset = "./images/groot.jpg";
                                                         }}
                                                         className="testimonial-image flex-shrink-0 object-cover rounded-full w-20 h-20 sm:w-32 sm:h-32"
                                                     />
