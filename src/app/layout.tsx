@@ -10,7 +10,7 @@ const poppins = Poppins({
 );
 
 export const metadata: Metadata = {
-  title: "EXCESS - Electronics, Communication and Information Engineering Student Society",
+  title: "EXCESS - Electronics and Communication Engineering Student Society",
   description: "IOE Purwanchal Campus - EXCESS",
 };
 

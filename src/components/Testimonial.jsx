@@ -33,14 +33,14 @@ export default function Testimonial() {
         {
             "user_id": 3,
             "name": "Bharat Bhatta",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
+            "body": "Leading EXCESS was a transformative journey. We focused on cutting-edge training and innovative projects, ensuring our students excelled in the digital realm. The camaraderie and dedication within our community were truly inspiring.",
             "profile": "./images/testimonial/BharatBhatta.jpg",
             "post": "EXCESS President 2'nd and 3'rd Committee"
         },
         {
             "user_id": 4,
             "name": "Suresh Bhandari",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
+            "body": "EXCESS was a cornerstone of my university experience. We fostered innovation and community, developing skills that extended beyond the classroom. The opportunities to lead and innovate shaped my career trajectory.",
             "profile": "./images/testimonial/SureshBhandari.jpg",
             "post": "EXCESS President 4'th Committee"
         },
