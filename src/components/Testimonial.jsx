@@ -39,7 +39,7 @@ export default async function Testimonial() {
             "name": "Bharat Bhatta",
             "body": "fdasjlfkkkkkflkasjjjjjjjjjjjjjjjjjjjjjjjfaskljjjjflkjdaslkjfaslkdjlkdjaslkfjds",
             "profile": "./images/testimonial/BharatBhatta.jpg",
-            "post": "EXCESS President 2'nd and 3'rd Committee"
+            "post": "EXCESS President 2'nd Committee"
         },
         {
             "user_id": 4,
