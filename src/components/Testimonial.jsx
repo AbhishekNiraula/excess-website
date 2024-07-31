@@ -50,7 +50,6 @@ export default async function Testimonial() {
         },
         {
             "user_id": 5,
-            "is_campus": true,
             "name": "Baikuntha Acharya",
             "body": "EXCESS provided a supportive community and valuable learning opportunities. We focused on growth and innovation in electronics engineering, preparing students for real-world challenges.",
             "profile": "./images/testimonial/BaikunthaAcharya.jpg",
