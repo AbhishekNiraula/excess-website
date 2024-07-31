@@ -37,14 +37,14 @@ export default async function Testimonial() {
         {
             "user_id": 3,
             "name": "Bharat Bhatta",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
+            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way",
             "profile": "./images/testimonial/BharatBhatta.jpg",
             "post": "EXCESS President 2'nd and 3'rd Committee"
         },
         {
             "user_id": 4,
             "name": "Suresh Bhandari",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
+            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way",
             "profile": "./images/testimonial/SureshBhandari.jpg",
             "post": "EXCESS President 4'th Committee"
         },
