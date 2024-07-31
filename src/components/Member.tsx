@@ -72,6 +72,16 @@ const data =[
     instaLink: "https://instagram.com",
     twitterLink: "https://twitter.com",
   },
+  {
+    id:7,
+    name:"Saubhagya Rajbhandari",
+    img:"./images/member/SaubhagyaRajbhandari.jpeg",
+    review:"Executive Member",
+    fbLink: "https://facebook.com",
+    githubLink: "https://github.com",
+    instaLink: "https://instagram.com",
+    twitterLink: "https://twitter.com",
+  },
 ]
 const Member = () => {
   return (
