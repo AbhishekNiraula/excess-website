@@ -13,11 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import "@/src/app/testimonial.css";
 
-
-
-
-
-export default async function Testimonial() {
+export default function Testimonial() {
 
     const testimonials = [
         {
@@ -37,7 +33,7 @@ export default async function Testimonial() {
         {
             "user_id": 3,
             "name": "Bharat Bhatta",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way.",
+            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
             "profile": "./images/testimonial/BharatBhatta.jpg",
             "post": "EXCESS President 2'nd and 3'rd Committee"
         },
@@ -50,6 +46,7 @@ export default async function Testimonial() {
         },
         {
             "user_id": 5,
+            "is_campus": true,
             "name": "Baikuntha Acharya",
             "body": "EXCESS provided a supportive community and valuable learning opportunities. We focused on growth and innovation in electronics engineering, preparing students for real-world challenges.",
             "profile": "./images/testimonial/BaikunthaAcharya.jpg",
@@ -93,11 +90,11 @@ export default async function Testimonial() {
     ]
 
     return (
-        <section className="py-14  overflow-x-hidden sm:py-10 bg-white lg:py-12">
+        <section className="py-14  overflow-x-hidden sm:py-10 bg-offWhite lg:py-12">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex flex-col items-center relative space-y-6">
                 <div className="text-center z-10">
-                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> Presidents Reflections</h2>
+                    <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos;s Reflections</h2>
                 </div>
                 <FaQuoteLeft className="w-24 h-24 absolute top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
 
@@ -115,14 +112,14 @@ export default async function Testimonial() {
                                 parallax={true}
                                 autoplay={{
                                     delay: 2500,
-                                    disableOnInteraction: false,        
+                                    disableOnInteraction: false,                                    
                                     pauseOnMouseEnter: true,
                                 }}
                                 pagination={{ el: ".swiper-pagination",type: "bullets", clickable: true, dynamicBullets: true,}}         
                                 mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
                                 loop={true}
                                 watchSlidesProgress={true} 
-                                slidesPerView = {1}
+                                slidesPerView="auto"
                                 modules={[Parallax, Mousewheel, Autoplay, Navigation, Pagination]}
                             >
                                 {testimonials.map((testimonial) => {
@@ -139,13 +136,13 @@ export default async function Testimonial() {
 
                                                     <Image
                                                         loader={({ src }) => src}
-                                                        src={testimonial.profile ? testimonial.profile : "/images/groot.jpg"}
+                                                        src={testimonial.profile ? testimonial.profile : "./images/groot.jpg"}
                                                         width={32}
                                                         height={32}
                                                         alt={testimonial.name} 
                                                         onError={(event) => {
-                                                            event.target.id = "/images/groot.jpg";
-                                                            event.target.srcset = "/images/groot.jpg";
+                                                            event.target.id = "./images/groot.jpg";
+                                                            event.target.srcset = "./images/groot.jpg";
                                                         }}
                                                         className="testimonial-image flex-shrink-0 object-cover rounded-full w-20 h-20 sm:w-32 sm:h-32"
                                                     />
