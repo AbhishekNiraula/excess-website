@@ -32,35 +32,35 @@ export default function Testimonial() {
             "is_campus": true,
             "name": "Baikuntha Acharya",
             "body": "EXCESS provided a supportive community and valuable learning opportunities. We focused on growth and innovation in electronics engineering, preparing students for real-world challenges.",
-            "profile": "/images/testimonial/BaikunthaAcharya.jpg",
+            "profile": "./images/testimonial/BaikunthaAcharya.jpg",
             "post": "EXCESS Secretary 5'th Committee"
         },
         {
             "user_id": 3,
             "name": "Ram Binay Sharma",
             "body": "Working with EXCESS has shown me the power of collaboration and the impact we can make through teamwork and shared goals.",
-            "profile": "/images/testimonial/BharatBhatta.jpg",
+            "profile": "./images/testimonial/BharatBhatta.jpg",
             "post": "EXCESS Secretary 6'th Committee"
         },
         {
             "user_id": 4,
             "name": "Sunil Pokharel",
             "body": "As president of EXCESS, I've seen firsthand the transformative impact of our society on our members' skills and confidence. We strive to foster an environment where everyone can excel.",
-            "profile": "/images/testimonial/SunilPokharel.jpg",
+            "profile": "./images/testimonial/SunilPokharel.jpg",
             "post": "EXCESS Secretary 7'th Committee"
         },
         {
             "user_id": 5,
             "name": "Sushan Kattel",
             "body": "EXCESS stands at the forefront of innovation in electronics engineering. It's a privilege to steer this society toward new achievements that define the future of technology.",
-            "profile": "/images/testimonial/SushanKattel.jpg",
+            "profile": "./images/testimonial/SushanKattel.jpg",
             "post": "EXCESS Secretary 8'th Committee"
         },
         {
             "user_id": 6,
             "name": "Gokarna Baskota",
             "body": "EXCESS was a cornerstone of my university experience. We fostered innovation and community, developing skills that extended beyond the classroom. The opportunities to lead and innovate shaped my career trajectory.",
-            "profile": "/images/testimonial/Gokarna.jpg",
+            "profile": "./images/testimonial/Gokarna.jpg",
             "post": "EXCESS Secretary 9'th Committee"
         },
         {

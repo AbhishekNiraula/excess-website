@@ -109,7 +109,7 @@ const Member = () => {
                     <div className="rounded-t-3xl flex justify-center items-center">
                         <Image
                             loader={({ src }) => src}
-                            src={d.img ? d.img : "/images/groot.jpg"}
+                            src={d.img ? d.img : "./images/groot.jpg"}
                             width={32}
                             height={32}
                             alt={d.name}
