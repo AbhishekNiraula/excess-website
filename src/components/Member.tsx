@@ -8,9 +8,19 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "@/src/app/member.css";
 import { Pagination, Navigation, Mousewheel } from 'swiper/modules';
-import { FaFacebook , FaGithub, FaInstagram, FaTwitter} from 'react-icons/fa';
+import { FaFacebook , FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const data =[
+  {
+    id: -1,
+    name:"Kaji Ram Karki",
+    img:"./images/member/kajisir.svg",
+    review:"Purwanchal Campus Chief",
+    fbLink: "https://facebook.com",
+    githubLink: "https://github.com",
+    instaLink: "https://instagram.com",
+    twitterLink: "https://twitter.com",
+  },
   {
     id:0,
     name:"Pravin Sangroula",
@@ -26,10 +36,10 @@ const data =[
     name:"Mahesh Chaudhary",
     img:"./images/member/Mahesh.jpg",
     review:"President",
-    fbLink: "https://facebook.com",
+    fbLink: "https://www.facebook.com/immahesh1/",
     githubLink: "https://github.com",
     instaLink: "https://instagram.com",
-    twitterLink: "https://twitter.com",
+    twitterLink: "https://www.linkedin.com/in/immahesh1/",
   },
   {
     id:2,
@@ -232,7 +242,7 @@ const Member = () => {
                             <FaInstagram size={18} className="m-1 hover:text-pink-600  transition duration-500" />
                         </a>
                         <a href={d.twitterLink}>
-                            <FaTwitter size={18} className="m-1 hover:text-blue-800  transition duration-500" />
+                            <FaLinkedin  size={18} className="m-1 hover:text-blue-800  transition duration-500" />
                         </a>
                     </div>
                     </div>

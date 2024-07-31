@@ -8,7 +8,7 @@ const Main = () => {
           <div className="px-4 my-auto mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="max-w-2xl mx-auto text-center">
                   <p className="text-3xl font-semibold leading-tight sm:leading-tight sm:text-3xl md:text-5xl lg:leading-tight">
-                      <span className="highlight">Electronics</span>and Communication Engineering
+                      <span className="highlight">Electronics</span> and Communication Engineering
                       <span className=" highlight relative inline-flex sm:inline"> Student Society</span>
                   </p>
                   <h1 className=" mt-5 px-6 text-md text-offBlack">The Electronics and Communication Engineering Student Society (EXCESS) is a non-political umbrella type society registered within the IOE Purwanchal campus, Dharan.It was formed in 2070 B.S.</h1>
