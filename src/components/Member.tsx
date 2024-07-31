@@ -24,7 +24,7 @@ const data =[
   {
     id:1,
     name:"Mahesh Chaudhary",
-    img:"./images/member/President.jpg",
+    img:"./images/member/Mahesh.jpg",
     review:"President",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
