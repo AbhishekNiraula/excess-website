@@ -20,13 +20,13 @@ export default function Testimonial() {
             "user_id": 1,
             "name": "Mahesh Chaudhary",
             "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
-            "profile": "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC/blob/main/Committee/Mahesh%20Chaudhary.jpg?raw=true",
+            "profile": "./images/testimonial/Mahesh.jpg",
             "post": "EXCESS President 11'th Committee"
         },
         {
             "user_id": 2,
             "name": "Ujwal Neupane",
-            "body": "We at EXCESS are devoted to developing the skill of Electronics Engineering students in a broad way by providing them with a platform to broaden their knowledge of the digital world so that they can be at the forefront of future technologies. We have been active in helping students learn new skills so they can deal with the implementation of applications, principles, and algorithms developed within many related fields.",
+            "body": "As a founding member of EXCESS, I'm incredibly proud of how the society has flourished over the past decade. Watching it grow and inspire students fills me with immense joy.",
             "profile": "UjwalNeupane.jpg",
             "post": "EXCESS President 1'st Committee"
         },
@@ -56,7 +56,7 @@ export default function Testimonial() {
             "user_id": 6,
             "name": "Ram Binay Sharma",
             "body": "Working with EXCESS has shown me the power of collaboration and the impact we can make through teamwork and shared goals.",
-            "profile": "./images/testimonial/BharatBhatta.jpg",
+            "profile": "./images/testimonial/RamBinaySharma.jpg",
             "post": "EXCESS Secretary 6'th Committee"
         },
         {
