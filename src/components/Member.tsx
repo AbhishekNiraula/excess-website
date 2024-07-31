@@ -14,7 +14,7 @@ const data =[
   {
     id:1,
     name:"Mahesh Chaudhary",
-    img:"/images/member/President.jpg",
+    img:"./images/member/President.jpg",
     review:"President",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
@@ -24,7 +24,7 @@ const data =[
   {
     id:2,
     name:"Sudip Parajuli",
-    img:"/images/member/VPresident.jpg",
+    img:"./images/member/VPresident.jpg",
     review:"Vice-President",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
@@ -35,7 +35,7 @@ const data =[
   {
     id:3,
     name:"Sunil Poudel",
-    img:"/images/member/Secretary.jpg",
+    img:"./images/member/Secretary.jpg",
     review:"Secretary",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
@@ -45,7 +45,7 @@ const data =[
   {
     id:4,
     name:"Safal Raj Basnet",
-    img:"/images/member/ProjectM.jpg",
+    img:"./images/member/ProjectM.jpg",
     review:"Project Manager",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
@@ -55,7 +55,7 @@ const data =[
   {
     id:5,
     name:"Nisha Karn",
-    img:"/images/member/Treasurer.jpg",
+    img:"./images/member/Treasurer.jpg",
     review:"Treasurer",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
@@ -65,7 +65,7 @@ const data =[
   {
     id:6,
     name:"Rishav Senchury",
-    img:"/images/member/ExecutiveM.jpeg",
+    img:"./images/member/ExecutiveM.jpeg",
     review:"Executive Member",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
