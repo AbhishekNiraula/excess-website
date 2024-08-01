@@ -3,7 +3,6 @@ import { Poppins } from "next/font/google";
 import "@/src/app/globals.css";
 import Footer from "@/src/components/Footer";
 import NextTopLoader from 'nextjs-toploader';
-import { Suspense } from "react";
 
 const poppins = Poppins({ 
   weight: '400',
@@ -20,7 +19,7 @@ export default function RootLayout({
   children,
   }: Readonly<{
     children: React.ReactNode;
-  }>) {
+  }>) {  
   return (
     <html lang="en">
       <head>
