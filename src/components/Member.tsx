@@ -37,8 +37,8 @@ const data =[
     img:"./images/member/Mahesh.jpg",
     review:"President",
     fbLink: "https://www.facebook.com/immahesh1/",
-    githubLink: "https://github.com",
-    instaLink: "https://instagram.com",
+    githubLink: "https://github.com/im-mahesh1",
+    instaLink: "https://www.instagram.com/immahesh_1",
     twitterLink: "https://www.linkedin.com/in/immahesh1/",
   },
   {
@@ -186,7 +186,7 @@ const data =[
 const Member = () => {
   return (
     <div className="w-full h-full py-10 members">
-        <div className="w-[75%]  m-auto text-center">
+        <div className="w-[85%] sm:w-[75%]  m-auto text-center">
         <div className="text-center">
                     <h2 className="text-2xl font-bold text-offWhite sm:text-4xl xl:text-3xl">Our Members</h2>
                     <h2 className='text-offWhite text-sm mt-2'>EXCESS 11&apos;th Executive Committee</h2>
@@ -197,7 +197,7 @@ const Member = () => {
             slidesPerView={1}
             navigation
             mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
-            pagination={{ clickable: true}}
+            pagination={{ clickable: true, dynamicBullets: true,}}
             modules={[Pagination, Navigation, Mousewheel]}
             breakpoints={{
                 // when window width is >= 640px
@@ -228,7 +228,7 @@ const Member = () => {
                     </div>
 
                     <div className="flex flex-col justify-center text-center items-center">
-                    <p className="bg-offBlue font-semibold text-md min-w-48 py-1.5 rounded border-x-4 border-primaryBlue text-primaryBlue mt-3">{d.name}</p>
+                    <p className="bg-offBlue font-semibold text-md min-w-44 px-2 py-1.5 rounded border-x-4 border-primaryBlue text-primaryBlue mt-3">{d.name}</p>
                     <p className="mt-2 font-regular text-md text-offBlack">{d.review}</p>
 
                     <div className='flex flex-row mt-2 text-offBlack'>

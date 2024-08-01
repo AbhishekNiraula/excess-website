@@ -71,7 +71,7 @@ const Footer = () => {
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-2">
                         {[
-                            ['facebook', "https://www.facebook.com"],
+                            ['facebook', "https://www.facebook.com/excessnepal/"],
                             ['instagram', "https://www.instagram.com/excess.ioe/"],
                             ['linkedin', "https://www.linkedin.com/company/excessioepc/"],
                             ['github', "https://github.com/EXCESS-IOEPC/EXCESS-IOEPC"],

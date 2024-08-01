@@ -13,7 +13,7 @@ const Navigation = () => {
   
   const navItems = [
     ['/', 'Home'],
-    ['/about-us', 'About Us'],
+    ['/#about-us', 'About Us'],
     ['/#members', 'Members'],
     ['/#testimonials', 'Testimonials'],
     ['/gallery', 'Gallery'],
