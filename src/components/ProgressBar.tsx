@@ -42,7 +42,7 @@ const Progressbar = ({ target }: ProgressbarProps) => {
   return (
     <div className="w-full sticky top-0 left-0 right-0 z-10">
       <div
-        className = { readingProgress > 0 ? "h-1 bg-xyellow" : "hidden" } 
+        className = { readingProgress > 0 ? "h-1 bg-primaryBlue" : "hidden" } 
         style={{
           width: `${readingProgress}%`,
         }}
