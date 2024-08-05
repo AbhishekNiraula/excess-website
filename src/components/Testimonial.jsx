@@ -109,6 +109,7 @@ export default function Testimonial() {
                             <Swiper
                                 direction={'horizontal'}
                                 navigation = {{enabled: true, nextEl: ".next", prevEl: ".previous"}}
+                                grabCursor = {true}
                                 parallax={true}
                                 autoplay={{
                                     delay: 2500,

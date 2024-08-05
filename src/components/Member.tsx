@@ -195,6 +195,7 @@ const Member = () => {
         <Swiper
             spaceBetween={5}
             slidesPerView={1}
+            grabCursor = {true}
             navigation
             mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
             pagination={{ clickable: true, dynamicBullets: true,}}
