@@ -2,7 +2,6 @@
 
 import "@/src/app/globals.css";
 import HeaderTop from '@/src/components/HeaderTop';
-import Navigation from "@/src/components/Navigation";
 import Main from "@/src/components/Main";
 import Testimonial from "@/src/components/Testimonial";
 import About from "@/src/components/About";
