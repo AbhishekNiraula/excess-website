@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "@/src/app/member.css";
-import { Pagination, Navigation, Mousewheel } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, Mousewheel } from 'swiper/modules';
 import { FaFacebook , FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const data =[
@@ -15,7 +15,7 @@ const data =[
     id: -1,
     name:"Kaji Ram Karki",
     img:"./images/member/kajisir.svg",
-    review:"Purwanchal Campus Chief",
+    review:"Campus Chief / Patron",
     fbLink: "https://facebook.com",
     githubLink: "https://github.com",
     instaLink: "https://instagram.com",
@@ -186,7 +186,7 @@ const data =[
 const Member = () => {
   return (
     <div className="w-full h-full py-10 members">
-        <div className="w-[85%] sm:w-[75%]  m-auto text-center">
+        <div className="w-[90%] sm:w-[85%] md:w-[80%]  m-auto text-center">
         <div className="text-center">
                     <h2 className="text-2xl font-bold text-offWhite sm:text-4xl xl:text-3xl">Our Members</h2>
                     <h2 className='text-offWhite text-sm mt-2'>EXCESS 11&apos;th Executive Committee</h2>
@@ -195,11 +195,15 @@ const Member = () => {
         <Swiper
             spaceBetween={5}
             slidesPerView={1}
-            grabCursor = {true}
             navigation
+            autoplay = {{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             mousewheel={{ sensitivity: 0.5, thresholdDelta: 50}}
             pagination={{ clickable: true, dynamicBullets: true,}}
-            modules={[Pagination, Navigation, Mousewheel]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
             breakpoints={{
                 // when window width is >= 640px
                 640: {

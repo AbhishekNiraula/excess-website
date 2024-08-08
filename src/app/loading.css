@@ -10,41 +10,12 @@
   background-color: #f5f5f5; /* Change to match your desired background color */
   z-index: 9999; /* Ensure this is higher than any other content on your page */
 }
-  
-  #preloader {
-    position: absolute;
-    width: 240px;
-    height: 120px;
-    top: 0; right: 0;
-    bottom: 0; left: 0; 
-    margin: auto;
-  }
-  
-  #preloader #plug,
-  #preloader #socket {
-    fill:#3572EF;
-  }
-  
-  #preloader #loop-normal {
-    fill: none;
-    stroke: #3572EF;
-    stroke-width: 12;
-  }
-  
-  #preloader #loop-offset {
-    display: none;
-  }
-  
-  .credit {
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .credit a {
-    color: #3572EF;
-    font: 800 75% "Open Sans", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+
+#preloader {
+	position: absolute;
+	width: 120px;
+	height: 60px;
+	top: 0; right: 0;
+	bottom: 0; left: 0; 
+	margin: auto;
+}

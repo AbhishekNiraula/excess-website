@@ -38,10 +38,10 @@ const Navigation = () => {
                 <li key={index} onClick={() => setNavbar(!navbar)}  className = { pathname == link ? "active nav-item h-full content-center w-24 text-center hover:text-primaryBlue" : "nav-item h-full content-center w-24 text-center hover:text-primaryBlue"}  > <Link href={link}> <p>{title}</p> </Link> </li>
               ))} 
               <Link onClick={() => setNavbar(!navbar)}  href="https://excess.ioepc.edu.np/xtech/">
-                <button className="w-40 h-10 rounded-md bg-xyellow transition text-offWhite duration-500 hover:bg-offWhite hover:border-[2px] hover:border-xyellow hover:text-xyellow font-bold">X-Tech</button>
+                <button className="w-40 h-10 rounded-md bg-xyellow transition text-offWhite duration-500 hover:bg-offWhite border-2 border-transparent hover:border-xyellow hover:text-xyellow font-bold">X-Tech</button>
               </Link>
               <Link onClick={() => setNavbar(!navbar)} href="https://cs50xnepal.ioepc.edu.np/">
-                <button className="w-40 h-10 rounded-md bg-cs50red transition text-offWhite duration-500 hover:bg-offWhite hover:border-[2px] hover:border-cs50red hover:text-cs50red font-bold">CS50xNepal</button>
+                <button className="w-40 h-10 rounded-md bg-cs50red transition text-offWhite duration-500 hover:bg-offWhite border-2 border-transparent hover:border-cs50red hover:text-cs50red font-bold">CS50xNepal</button>
               </Link>
               </div>
             </ul>

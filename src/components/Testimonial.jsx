@@ -92,11 +92,11 @@ export default function Testimonial() {
     return (
         <section className="py-14  sm:py-10 bg-offWhite lg:py-12">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="flex flex-col items-center relative space-y-6">
+            <div className="flex flex-col justify-center items-center relative space-y-6">
                 <div className="text-center z-10">
                     <h2 className="text-2xl font-bold text-offBlack sm:text-4xl xl:text-3xl"><span className="highlight"> EXCESS</span> President&apos;s Reflections</h2>
                 </div>
-                <FaQuoteLeft className="w-24 h-24 absolute top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
+                <FaQuoteLeft className="w-24 h-24 absolute top-[-10%] md:top-[-12%] max-[550px]:top-[-14%] text-offBlueTrans" />
 
                 <div className="relative md:mt-12 w-full bg-offWhite rounded-3xl">
                     
@@ -109,7 +109,6 @@ export default function Testimonial() {
                             <Swiper
                                 direction={'horizontal'}
                                 navigation = {{enabled: true, nextEl: ".next", prevEl: ".previous"}}
-                                grabCursor = {true}
                                 parallax={true}
                                 autoplay={{
                                     delay: 2500,
@@ -126,7 +125,7 @@ export default function Testimonial() {
                                 {testimonials.map((testimonial) => {
                                     return (
                                         <>
-                                            <SwiperSlide className="flex flex-col justify-betweenmax-[640px]:my-auto lg:pt-8 lg:px-7" key={testimonial.user_id}>
+                                            <SwiperSlide className="flex flex-col justify-between max-[640px]:my-auto lg:pt-8 lg:px-7" key={testimonial.user_id}>
                                                 <div className="w-[75%] mx-auto mt-6 max-[640px]:mt-3 md:mt-6 lg:mt-0">
                                                     <blockquote>
                                                         <p className="text-sm max-[550px]:text-xs text-center text-offBlack">{testimonial.body}</p>
