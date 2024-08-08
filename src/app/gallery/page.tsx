@@ -11,7 +11,6 @@ export default function Home() {
         <HeaderTop />
         <Navbar />
       </section>
-
       <ClientSideWrapper>
         <Gallery />
       </ClientSideWrapper>
