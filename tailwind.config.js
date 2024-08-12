@@ -23,6 +23,7 @@ module.exports = {
         'erc-scaled': "url('../../public/images/erc-scaled.jpg')",
         'wave': "url('../../public/images/wave.svg')",
         'line': "url('../../public/images/line.svg')",
+        'server_down': "url('../../public/images/server_down.svg')",
       }
     },
   },
