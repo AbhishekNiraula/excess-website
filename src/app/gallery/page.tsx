@@ -7,6 +7,8 @@ import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
 import ErrorComponent from '@/src/app/error';
+import { DynamicServerError, isDynamicServerError } from "next/dist/client/components/hooks-server-context";
+
 
 
 interface Image {
@@ -34,6 +36,9 @@ export default async function Home({
       .sort_by('public_id', 'desc')
       .execute() as { resources: Image[] };
   } catch (error) {
+    if (isDynamicServerError(error)){
+      throw error;
+    }
     return (
       <ErrorComponent message="There was an error fetching the gallery images. Please check your internet connection or try again later." />
     );

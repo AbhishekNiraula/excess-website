@@ -6,6 +6,9 @@ import '@/src/app/gallery/gallery.css';
 import Filter from '@/src/app/gallery/filter';
 
 
+
+
+
 interface Image {
   public_id: string;
   width: number;
