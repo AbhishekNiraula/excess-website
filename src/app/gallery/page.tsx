@@ -7,38 +7,24 @@ import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
 import ErrorComponent from '@/src/app/error';
-import { DynamicServerError, isDynamicServerError } from "next/dist/client/components/hooks-server-context";
-
-
 
 interface Image {
   public_id: string;
   width: number;
   height: number;
+  asset_folder: string;
 }
 
-export default async function Home({
-  searchParams: { filter },
-}: {
-  searchParams: {
-    filter: string;
-  };
-}) {
-
-  const expression = filter
-    ? `resource_type:image AND folder:"${filter}"`
-    : 'resource_type:image';
-
+export default async function Home() {
   let res;
   try {
     res = await cloudinary.v2.search
-      .expression(expression)
+      .expression('resource_type:image')
       .sort_by('public_id', 'desc')
+      .max_results(150)
       .execute() as { resources: Image[] };
-  } catch (error) {
-    if (isDynamicServerError(error)){
-      throw error;
-    }
+  } 
+  catch (error) {
     return (
       <ErrorComponent message="There was an error fetching the gallery images. Please check your internet connection or try again later." />
     );
@@ -46,7 +32,7 @@ export default async function Home({
 
   if (!res || res.resources.length === 0) {
     return (
-      <ErrorComponent message="No images found. Please select a different filter or check back later." />
+      <ErrorComponent message="No images found. Please check back later." />
     );
   }
 
@@ -58,7 +44,7 @@ export default async function Home({
       </section>
 
       <ClientSideWrapper>
-            <View  initialSearch={filter} images={res.resources} />
+        <View initialSearch="" images={res.resources} />
       </ClientSideWrapper>
     </>
   );
