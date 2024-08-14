@@ -17,6 +17,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [filteredImages, setFilteredImages] = useState(images);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const filters = ["All", "CS50xNepal", "CLI Training", "XTech 1.0", "XTech 3.0", "XTech 4.0", "Robotics Workshop", "Hardware Hackathon", "Handover Ceremony", "Python Training", "IOT Training", "Web Scraping", "Libre Office"];
 
@@ -62,6 +63,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
   };
 
   const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
     if (filter === "All") {
       setFilteredImages(images);
     } else {
@@ -97,7 +99,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
             {filters.map((filter) => (
               <button
                 key={filter}
-                className={`text-sm ${filter === initialSearch ? 'gallery-active' : ''}`}
+                className={`text-sm ${filter === activeFilter ? 'gallery-active' : ''}`}
                 onClick={() => handleFilterChange(filter)}
               >
                 {filter}
@@ -108,19 +110,19 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
           {filteredImages.map((image, idx) => (
             <motion.div
               key={idx}
-              className="h-auto max-w-full rounded-lg cursor-pointer"
               initial="hidden"
               animate="visible"
               variants={imageVariants}
               custom={idx}
             >
               <CldImage
+                className="h-auto max-w-full rounded-lg cursor-pointer object-contain"
                 src={image.public_id}
                 alt="Gallery Image"
                 width="300"
                 height="300"
                 crop="fill"
-                loading="eager"
+                loading="lazy"
                 onClick={() => openImage(idx)}
               />
               <p className='text-center text-xs mt-2 text-offBlack'>{image.asset_folder}</p>

@@ -53,7 +53,7 @@ function NavBar() {
   ];
 
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-hidden'>
       <motion.nav animate={navbar ? "open" : "closed"} className="w-full h-auto md:h-14 bg-offWhite text-offBlack top-0 left-0 right-0 z-10">
         <div className="justify-end align-center h-full md:items-center md:flex px-2 sm:px-9">
           <div className="flex items-center justify-end py-3 md:py-5 md:block">
