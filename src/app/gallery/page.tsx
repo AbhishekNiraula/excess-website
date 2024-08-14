@@ -29,6 +29,15 @@ export default async function Home() {
       .sort_by('public_id', 'desc')
       .max_results(150)
       .execute() as { resources: Image[] };
+    if (res.resources)
+    {
+    console.log(res.resources);
+    }
+    else
+    {
+      console.log("Not loaded");
+    }
+    
   } 
   catch (error) {
     return (
