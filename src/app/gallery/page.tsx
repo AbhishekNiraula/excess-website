@@ -1,8 +1,9 @@
+// pages/index.tsx
 import React from 'react';
 import View from "@/src/app/gallery/view";
 import HeaderTop from '@/src/components/HeaderTop';
 import Navbar from '@/src/components/Navbar';
-import cloudinary from 'cloudinary';
+import { Cloudinary } from 'cloudinary-core'; // Adjusted import
 import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
@@ -15,40 +16,60 @@ interface Image {
   asset_folder: string;
 }
 
-cloudinary.v2.config({
+// Configure Cloudinary
+const cloudinary = new Cloudinary({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
   api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+  secure: true
 });
 
-export default async function Home() {
+// Fetch images from Cloudinary
+export async function getStaticProps() {
   let res;
   try {
-    res = await cloudinary.v2.search
+    const cloudinaryApi = require('cloudinary').v2;
+    cloudinaryApi.config({
+      cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+      api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+      secure: true
+    });
+    
+    res = await cloudinaryApi.search
       .expression('resource_type:image')
       .sort_by('public_id', 'desc')
       .max_results(150)
       .execute() as { resources: Image[] };
-    if (res.resources)
-    {
-    console.log(res.resources);
-    }
-    else
-    {
-      console.log("Not loaded");
-    }
-    
   } 
   catch (error) {
-    return (
-      <ErrorComponent message="There was an error fetching the gallery images. Please check your internet connection or try again later." />
-    );
+    return {
+      props: {
+        error: 'There was an error fetching the gallery images. Please check your internet connection or try again later.'
+      }
+    };
   }
 
   if (!res || res.resources.length === 0) {
-    return (
-      <ErrorComponent message="No images found. Please check back later." />
-    );
+    return {
+      props: {
+        error: 'No images found. Please check back later.'
+      }
+    };
+  }
+
+  return {
+    props: {
+      images: res.resources,
+      error: null
+    },
+    revalidate: 60 // Optional: revalidate every 60 seconds
+  };
+}
+
+const Home = ({ images, error }: { images: Image[]; error: string }) => {
+  if (error) {
+    return <ErrorComponent message={error} />;
   }
 
   return (
@@ -59,8 +80,10 @@ export default async function Home() {
       </section>
 
       <ClientSideWrapper>
-        <View initialSearch="" images={res.resources} />
+        <View initialSearch="" images={images} />
       </ClientSideWrapper>
     </>
   );
-}
+};
+
+export default Home;
