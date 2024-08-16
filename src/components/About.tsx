@@ -50,7 +50,7 @@ const About = () => {
               quality={90}
               layout="responsive"
               objectFit="cover"
-              className="w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
+              className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
             />
         </motion.div>
       </div>
