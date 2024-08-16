@@ -40,7 +40,6 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <picture>
             <Image
               width={32}
               height={32}
@@ -48,7 +47,6 @@ const About = () => {
               src="./images/erc-scaled.jpg"
               className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
             />
-          </picture>
         </motion.div>
       </div>
     </section>
