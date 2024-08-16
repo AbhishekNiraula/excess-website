@@ -1,9 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CldImage } from "next-cloudinary";
 import { FaXmark, FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import '@/src/app/gallery/gallery.css';
-import Filter from '@/src/app/gallery/filter';
 import { motion } from 'framer-motion';
 
 interface Image {
@@ -19,7 +18,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
   const [filteredImages, setFilteredImages] = useState(images);
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "CS50xNepal", "CLI Training", "XTech 1.0", "XTech 3.0", "XTech 4.0", "Robotics Workshop", "Hardware Hackathon", "Handover Ceremony", "Python Training", "IOT Training", "Web Scraping", "Libre Office"];
+  const filters = ["All", "CS50xNepal", "CLI Training", "XTech 1.0", "XTech 3.0", "XTech  4.0", "Robotics Workshop", "Hardware Hackathon", "Handover Ceremony", "Python Training", "IOT Training", "Web Scraping", "Libre Office"];
 
   const openImage = (index: number) => {
     setCurrentIndex(index);
@@ -30,44 +29,78 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
     setIsOpen(false);
   };
 
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent closing when clicking the buttons
+  const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredImages.length);
   };
 
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent closing when clicking the buttons
+  const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredImages.length) % filteredImages.length);
   };
 
-  const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: (index: number) => ({
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        delay: index * 0.2,
-      },
-    }),
-  };
+  // Handle keypresses for navigation and closing
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (isOpen) {
+        switch (e.key) {
+          case 'ArrowRight':
+          case 'ArrowDown':
+            handleNext();
+            break;
+          case 'ArrowLeft':
+          case 'ArrowUp':
+            handlePrev();
+            break;
+          case 'Escape':
+            closeImage();
+            break;
+        }
+      }
+    };
 
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  // Handle swipe gestures for navigation
+  useEffect(() => {
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      touchStartX = touch.clientX;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isOpen) return;
+      const touch = e.touches[0];
+      const touchEndX = touch.clientX;
+
+      if (touchStartX - touchEndX > 50) {
+        handleNext();
+      }
+
+      if (touchStartX - touchEndX < -50) {
+        handlePrev();
+      }
+    };
+
+    let touchStartX = 0;
+
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [isOpen]);
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
     if (filter === "All") {
       setFilteredImages(images);
     } else {
-        setFilteredImages(images.filter(image => image.asset_folder === (filter)));
+      setFilteredImages(images.filter(image => image.asset_folder === filter));
     }
   };
 
@@ -79,7 +112,10 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
             className="text-3xl font-extrabold text-primaryBlue"
             initial="hidden"
             animate="visible"
-            variants={textVariants}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { duration: 0.6 } },
+            }}
           >
             Our Story in Picture
           </motion.h2>
@@ -87,8 +123,10 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
             className="mt-4 text-md text-offBlack"
             initial="hidden"
             animate="visible"
-            variants={textVariants}
-            transition={{ delay: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+            }}
           >
             Our gallery is a testament to the experiences and milestones that shape us. Delve into a visual narrative that reflects our unique journey.
           </motion.p>
@@ -112,7 +150,10 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
               key={idx}
               initial="hidden"
               animate="visible"
-              variants={imageVariants}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { duration: 0.6, delay: idx * 0.2 } },
+              }}
               custom={idx}
             >
               <CldImage
@@ -122,7 +163,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
                 width="300"
                 height="300"
                 crop="fill"
-                loading="lazy"
+                loading="eager"
                 onClick={() => openImage(idx)}
               />
               <p className='text-center text-xs mt-2 text-offBlack'>{image.asset_folder}</p>
@@ -136,13 +177,12 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
           <div
             className="m-10 inset-0 z-50 flex items-center justify-center w-[80vh] bg-black bg-opacity-90"
             onClick={closeImage}
-            onKeyDown={(e) => e.key === 'Escape' && closeImage()}
             tabIndex={0}
           >
             <button className="absolute top-0 mt-2 md:mt-4 scroll-button cross z-50" onClick={closeImage}>
               <FaXmark />
             </button>
-            <button className="scroll-button absolute left-0 ml-4 md:ml-14 z-50" onClick={(e) => handlePrev(e)}>
+            <button className="scroll-button absolute left-0 ml-4 md:ml-14 z-50" onClick={(e) => { e.stopPropagation(); handlePrev(); }}>
               <FaArrowLeftLong />
             </button>
 
@@ -156,7 +196,7 @@ const View = ({ images, initialSearch }: { images: Image[], initialSearch: strin
               loading="eager"
             />
 
-            <button className='scroll-button absolute right-0 mr-4 md:mr-14' onClick={(e) => handleNext(e)}>
+            <button className='scroll-button absolute right-0 mr-4 md:mr-14' onClick={(e) => { e.stopPropagation(); handleNext(); }}>
               <FaArrowRightLong />
             </button>
           </div>
