@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+
 const About = () => {
   return (
     <section className="py-10">
@@ -44,7 +45,7 @@ const About = () => {
               width={32}
               height={32}
               alt="ERC Image"
-              src="./images/erc-scaled.jpg"
+              src="@/public/images/erc-scaled.jpg"
               className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
             />
         </motion.div>
