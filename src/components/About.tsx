@@ -42,13 +42,19 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <Image
-            alt="ERC Image"
-            src={erc_image}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"
-          />
+          <picture>
+            
+          </picture>
+            <Image
+              width={32}
+              height={32}
+              alt="ERC Image"
+              src={erc_image}
+              quality={90}
+              layout="fill"
+              objectFit="cover"
+              className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
+            />
         </motion.div>
       </div>
     </section>
