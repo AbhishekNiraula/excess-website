@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 
-const erc_image = "./images/erc-scaled.jpg";
+const erc_image = "/images/erc-scaled.jpg";
 
 const About = () => {
   return (
