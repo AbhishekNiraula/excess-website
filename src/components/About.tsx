@@ -36,25 +36,20 @@ const About = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className="md:w-2/5 border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue"
+          className="md:w-2/5 border-b-4 md:border-l-4 md:border-b-0 border-primaryBlue relative"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <picture>
-            
-          </picture>
-            <Image
-              width={32}
-              height={32}
-              alt="ERC Image"
-              src={erc_image}
-              quality={90}
-              layout="fill"
-              objectFit="cover"
-              className="bg-cover w-full h-full rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50 object-cover"
-            />
+          <Image
+            alt="ERC Image"
+            src={erc_image}
+            layout="fill"
+            objectFit="cover"
+            quality={90}
+            className="rounded-t-2xl rounded-r-0 md:rounded-r-2xl md:rounded-tl-none brightness-50"
+          />
         </motion.div>
       </div>
     </section>
