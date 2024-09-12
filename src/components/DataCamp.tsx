@@ -61,14 +61,14 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 									, this fellowship aims to equip passionate Nepali Students and
 									professionals with the skills needed to thrive in today's
 									data-driven world. This initiative provides free access to
-									DataCamp&aposs premium courses, helping learners build and
+									DataCamp&apos;s premium courses, helping learners build and
 									enhance their data skills, regardless of their finiancial
 									background.
 								</p>
 								<p className="pt-5">
 									This fellowship is ideal for anyone looking to evaluate their
 									career, especially those who lack access to high -quality data
-									education. Whether you&aposre a student, professional, or
+									education. Whether you&apos;re a student, professional, or
 									aspiring data enthusiast, this program will help you gain the
 									skills that can shape your future.
 								</p>
@@ -78,7 +78,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						{/* side Image */}
 						{/* hidden till min 768px */}
 						<div className="block md:min-w-[24rem] align-center justify-center">
-							<img src="/images/datacamp/Image.png" alt="logo" />
+							<Image src="/images/datacamp/Image.png" alt="logo" />
 						</div>
 					</div>
 
@@ -107,7 +107,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							essentials to advanced programming all taught by leading industry
 							level experts.Companies like Google,Uber, and PayPal use DataCamp
 							to upskill their employee, and now, through their partnership,
-							we&aposre bringing that same opportunity to you!{' '}
+							we&apos;re bringing that same opportunity to you!{' '}
 						</p>
 					</div>
 				</div>
@@ -122,8 +122,8 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							<p>The Data Fellowship offers:</p>
 							<ul className="list-disc pl-5">
 								<li className="py-1">
-									<b>Premium Access to DataCamp:</b> Full access to DataCamp's
-									premium courses and certifications.{' '}
+									<b>Premium Access to DataCamp:</b> Full access to
+									DataCamp&apos;s premium courses and certifications.{' '}
 								</li>
 								<li className="py-1">
 									<b>Opportunity to Publish:</b> Fellows will have the chance to
