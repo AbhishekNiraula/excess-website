@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import React from 'react';
 import { Poppins } from 'next/font/google';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
@@ -26,7 +27,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 						<div className="mb-5 flex flex-col">
 							<div className="flex flex-row w-48 md:w-60 h-14 mt-4 mb-4">
 								{/* Excess Logo */}
-								<img
+								<Image
 									src="icon.png"
 									alt="Excess Logo"
 									className="pr-6 w-20 md:w-[6.5rem]"
@@ -36,7 +37,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 									<div className="w-0.5"></div>
 								</div>
 								{/* DAta Camp Logo */}
-								<img
+								<Image
 									src="images/datacamp/datacamp donates 1.png"
 									className="pl-6"
 									alt="Datacamp Donates Logo"
