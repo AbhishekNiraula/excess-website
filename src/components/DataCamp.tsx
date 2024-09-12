@@ -59,7 +59,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 										DataCamp Donates
 									</a>
 									, this fellowship aims to equip passionate Nepali Students and
-									professionals with the skills needed to thrive in today's
+									professionals with the skills needed to thrive in today&apos;s
 									data-driven world. This initiative provides free access to
 									DataCamp&apos;s premium courses, helping learners build and
 									enhance their data skills, regardless of their finiancial
