@@ -60,15 +60,16 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 									, this fellowship aims to equip passionate Nepali Students and
 									professionals with the skills needed to thrive in today's
 									data-driven world. This initiative provides free access to
-									DataCamp's premium courses, helping learners build and enhance
-									their data skills, regardless of their finiancial background.
+									DataCamp&aposs premium courses, helping learners build and
+									enhance their data skills, regardless of their finiancial
+									background.
 								</p>
 								<p className="pt-5">
 									This fellowship is ideal for anyone looking to evaluate their
 									career, especially those who lack access to high -quality data
-									education. Whether you're a student, professional, or aspiring
-									data enthusiast, this program will help you gain the skills
-									that can shape your future.
+									education. Whether you&aposre a student, professional, or
+									aspiring data enthusiast, this program will help you gain the
+									skills that can shape your future.
 								</p>
 							</div>
 						</div>
@@ -105,7 +106,7 @@ const DataCamp = ({ isLoading }: { isLoading: boolean }) => {
 							essentials to advanced programming all taught by leading industry
 							level experts.Companies like Google,Uber, and PayPal use DataCamp
 							to upskill their employee, and now, through their partnership,
-							we're bringing that same opportunity to you!{' '}
+							we&aposre bringing that same opportunity to you!{' '}
 						</p>
 					</div>
 				</div>
