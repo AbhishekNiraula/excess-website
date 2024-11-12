@@ -6,7 +6,6 @@ import cloudinary from 'cloudinary';
 import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
-import ErrorComponent from '@/src/app/error';
 import { Images } from '@/src/app/gallery/galleryImages';
 
 export default async function Home() {
