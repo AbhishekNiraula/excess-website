@@ -19,7 +19,7 @@ export default async function Home() {
 	let data;
 	try {
 		const file = await fs.readFile(
-			process.cwd() + '/src/app/gallery/galleryImages.json',
+			process.cwd() + './src/app/gallery/galleryImages.json',
 			'utf8'
 		);
 		data = JSON.parse(file);
