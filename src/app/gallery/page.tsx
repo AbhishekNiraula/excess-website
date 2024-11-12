@@ -7,37 +7,9 @@ import '@/src/app/gallery/gallery.css';
 import '@/src/app/globals.css';
 import ClientSideWrapper from '@/src/components/ClientSideWrapper';
 import ErrorComponent from '@/src/app/error';
-import { promises as fs } from 'fs';
+import { Images } from '@/src/app/gallery/galleryImages';
 
-interface Image {
-	public_id: string;
-	width: number;
-	height: number;
-	asset_folder: string;
-}
 export default async function Home() {
-	let data;
-	try {
-		const file = await fs.readFile(
-			process.cwd() + './gallery/galleryImages.json',
-			'utf8'
-		);
-		data = JSON.parse(file);
-		console.log(data);
-	} catch (error) {
-		console.error('Error reading the data.', error);
-		return (
-			<ErrorComponent message="There was an error fetching the gallery images. Please check your internet connection or try again later." />
-		);
-	}
-	const images: Image[] = data.resources.map((value: any) => {
-		return {
-			public_id: value.public_id,
-			width: value.width,
-			height: value.height,
-			asset_folder: value.asset_folder,
-		};
-	});
 	return (
 		<>
 			<section id="header">
@@ -46,7 +18,7 @@ export default async function Home() {
 			</section>
 
 			<ClientSideWrapper>
-				<View initialSearch="" images={images} />
+				<View initialSearch="" images={Images} />
 			</ClientSideWrapper>
 		</>
 	);
