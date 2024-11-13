@@ -4,12 +4,16 @@ import { CldImage } from 'next-cloudinary';
 import { FaXmark, FaArrowRightLong, FaArrowLeftLong } from 'react-icons/fa6';
 import '@/src/app/gallery/gallery.css';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { ClipLoader } from 'react-spinners';
+import Loading from '@/src/components/LoadingGallery';
 
 interface Image {
-	public_id: string;
 	width: number;
 	height: number;
 	asset_folder: string;
+	url: string;
+	secure_url: string;
 }
 
 const View = ({
@@ -23,6 +27,7 @@ const View = ({
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [filteredImages, setFilteredImages] = useState(images);
 	const [activeFilter, setActiveFilter] = useState('All');
+	const [loading, setLoading] = useState(false);
 
 	const filters = [
 		'All',
@@ -39,18 +44,20 @@ const View = ({
 		'Web Scraping',
 		'Libre Office',
 	];
-
 	const openImage = (index: number) => {
+		setLoading(true);
 		setCurrentIndex(index);
 		setIsOpen(true);
 	};
 
 	const closeImage = () => {
 		setIsOpen(false);
+		setLoading(false);
 	};
 
 	const handleNext = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredImages.length);
+		setLoading(true);
 	};
 
 	const handlePrev = () => {
@@ -58,6 +65,7 @@ const View = ({
 			(prevIndex) =>
 				(prevIndex - 1 + filteredImages.length) % filteredImages.length
 		);
+		setLoading(true);
 	};
 
 	// Handle keypresses for navigation and closing
@@ -129,6 +137,14 @@ const View = ({
 		}
 	};
 
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (loading) setLoading(false); // Hide loader after 5 seconds
+		}, 5000);
+
+		return () => clearTimeout(timer);
+	}, [loading]);
+
 	return (
 		<>
 			<section
@@ -187,13 +203,13 @@ const View = ({
 								},
 							}}
 							custom={idx}>
-							<CldImage
-								className="h-auto max-w-full rounded-lg cursor-pointer object-contain"
-								src={image.public_id}
+							<Image
+								className="h-auto max-w-full rounded-lg cursor-pointer object-cover"
+								src={image.secure_url ? image.secure_url : image.url}
 								alt="Gallery Image"
 								width="300"
 								height="300"
-								crop="fill"
+								quality={100}
 								loading="eager"
 								onClick={() => openImage(idx)}
 							/>
@@ -206,7 +222,10 @@ const View = ({
 			</section>
 
 			{isOpen && (
-				<section className="w-screen relative h-[100%] top-0 items-center justify-center z-50">
+				<section
+					className={`w-screen relative h-[100%] top-0 items-center justify-center z-50 ${
+						loading ? 'h-[85vh] py-10' : ''
+					} `}>
 					<div
 						className="m-10 inset-0 z-50 flex items-center justify-center w-[80vh] bg-black bg-opacity-90"
 						onClick={closeImage}
@@ -225,15 +244,25 @@ const View = ({
 							<FaArrowLeftLong />
 						</button>
 
-						<CldImage
-							className="object-contain"
-							src={filteredImages[currentIndex].public_id}
+						<Image
+							className={`object-contain ${loading ? 'hidden' : ''}`}
+							src={
+								filteredImages[currentIndex].secure_url
+									? filteredImages[currentIndex].secure_url
+									: filteredImages[currentIndex].url
+							}
 							alt={`Fullscreen Image ${currentIndex + 1}`}
 							width={1200}
 							height={400}
-							preserveTransformations
-							loading="eager"
+							quality={100}
+							loading="lazy"
+							onLoad={() => setLoading(false)}
 						/>
+						{loading && (
+							<div className="flex items-center justify-center bg-offWhite z-50 py-10">
+								<Loading />
+							</div>
+						)}
 
 						<button
 							className="scroll-button absolute right-0 mr-4 md:mr-14"
